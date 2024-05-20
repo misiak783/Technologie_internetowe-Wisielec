@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisielec</title>
+    <!-- Dołączanie arkusza stylów CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Wisielec</h1>
+    <p>Odgadnij słowo</p>
+    <!-- Kontener gry -->
+    <div class="kontener-gry">
+        <!-- Element SVG do rysowania wisielca -->
+        <svg height="250" width="200" class="kontener-rysunku">
+            <!-- Elementy rysunku -->
+            <line x1="60" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="50" />
+            <line x1="60" y1="20" x2="60" y2="230" />
+            <line x1="20" y1="230" x2="100" y2="230" />
+            <circle cx="140" cy="70" r="20" class="czesc-rysunku" />
+            <line x1="140" y1="90" x2="140" y2="150" class="czesc-rysunku" />
+            <line x1="140" y1="120" x2="120" y2="100" class="czesc-rysunku" />
+            <line x1="140" y1="120" x2="160" y2="100" class="czesc-rysunku" />
+            <line x1="140" y1="150" x2="120" y2="180" class="czesc-rysunku" />
+            <line x1="140" y1="150" x2="160" y2="180" class="czesc-rysunku" />
+        </svg>
+
+        <!-- Kontener dla błędnych liter -->
+        <div class="kontener-blednych-liter">
+            <div id="bledne-litery"></div>
+        </div>
+
+        <!-- Kontener dla wyświetlania słowa -->
+        <div class="slowo" id="slowo"></div>
+    </div>
+
+    <!-- Kontener dla okna po wygranej/przegranej -->
+    <div class="kontener-popup" id="kontener-popup">
+        <div class="popup">
+            <!-- Wyświetlanie wiadomości końcowej -->
+            <h2 id="wiadomosc-koncowa"></h2>
+            <!-- Przycisk do ponownej gry -->
+            <button id="przycisk-graj-ponownie">Graj Ponownie</button>
+        </div>
+    </div>
+
+    <!-- Kontener dla powiadomień -->
+    <div class="kontener-powiadomienia" id="kontener-powiadomienia">
+        <!-- Wyświetlanie komunikatu o już podanej literze -->
+        <p>Już podałeś tę literę</p>
+    </div>
+    <!-- Dołączanie pliku ze skryptem JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

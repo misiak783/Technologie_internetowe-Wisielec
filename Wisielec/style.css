@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1E272E;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 30px 0 0;
+    font-size: 36px;
+}
+
+.kontener-gry {
+    padding: 30px 45px;
+    position: relative;
+    margin: auto;
+    height: 400px;
+    width: 550px;
+    background-color: #394867;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.kontener-rysunku {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 5px;
+    stroke-linecap: round;
+}
+
+.czesc-rysunku {
+    display: none;
+}
+
+.kontener-blednych-liter {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.kontener-blednych-liter p {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.kontener-blednych-liter span {
+    font-size: 30px;
+}
+
+.slowo {
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.litera {
+    border-bottom: 5px solid #F9A825;
+    display: inline-flex;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 6px;
+    height: 60px;
+    width: 30px;
+}
+
+.kontener-popup {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background-color: #394867;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    text-align: center;
+}
+
+.popup button {
+    cursor: pointer;
+    background-color: #F9A825;
+    color: #fff;
+    border: 0;
+    margin-top: 30px;
+    padding: 16px 30px;
+    font-size: 20px;
+}
+
+.popup button:active {
+    transform: scale(0.98);
+}
+
+.popup button:focus {
+    outline: 0;
+}
+
+.kontener-powiadomienia {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px 15px 0 0;
+    padding: 20px 30px;
+    position: absolute;
+    bottom: -70px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.kontener-powiadomienia p {
+    margin: 0;
+    font-size: 22px;
+}
+
+.kontener-powiadomienia.show {
+    transform: translateY(-70px);
+}
